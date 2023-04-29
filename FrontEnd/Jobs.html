@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <style>
+    /* Add some styles to the table and its cells */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    /* Add some styles to the table header */
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* Add some styles to the table rows */
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* Add some styles to the table cells in the Status column */
+    .status {
+      font-weight: bold;
+    }
+
+    .status.pending {
+      color: orange;
+    }
+
+    .status.completed {
+      color: green;
+    }
+
+    .status.failed {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Job Listings</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>S.N.</th>
+        <th>Job ID</th>
+        <th>Status</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1234</td>
+        <td class="status pending">Pending</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>5678</td>
+        <td class="status completed">Completed</td>
+        <td>Result data goes here</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>9012</td>
+        <td class="status failed">Failed</td>
+        <td>Error message goes here</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
