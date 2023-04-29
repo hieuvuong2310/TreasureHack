@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>AI Teaching Assistant</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div class = "home">
-        <h1>Welcome to AI Teaching assistant</h1>
-        <p>
-            We provide you assistant to AI Teaching Assisant where you can upload your reading PDF <br>
-            Then our AI TA will help to to summarize the reading <br>
-            You also have an option to ask questions related to the document you upload for our AI TA.
-        </p>
-        <div class="up">
-            <div class="fileName">
-              <a>No file selected</a>
-            </div>
-            <div class="file-search-button">
-              <label for="file-upload" class="custom-file-upload">
-                <i class="fa fa-search"></i> Upload
-              </label>
-              <input id="file-upload" type="file"/>
-            </div>
-        </div>
-        <script src="script.js"></script>
-        <button type = "submit" name="summary" id = "summary">Get summary</button> <br>
-        <button type = "submit" name="qa" id = "qa">Q&A with TA</button> <br>
-  </body>
+
+<head>
+  <title>AI Teaching Assistant</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="home">
+    <h1>Welcome to AI Teaching assistant</h1>
+    <p>
+      We provide you assistant to AI Teaching Assisant where you can upload your reading PDF <br>
+      Then our AI TA will help to to summarize the reading <br>
+      You also have an option to ask questions related to the document you upload for our AI TA.
+    </p>
+    <form class="up" action="#">
+      <div class="fileName">
+        <a>No file selected</a>
+      </div>
+      <div class="file-search-button">
+        <label for="file-upload" class="custom-file-upload">
+          <i class="fa fa-search"></i>
+          Upload
+        </label>
+        <input id="file-upload" type="file" />
+      </div>
+    </form>
+    <button type="button" name="summary" id="summary">Get summary</button> <br>
+    <button type="button" name="qa" id="qa">Q&A with TA</button> <br>
+</body>
+
 </html>
