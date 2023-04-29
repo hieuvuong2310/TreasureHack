@@ -55,27 +55,3 @@ document.querySelector("#summary")?.addEventListener("click", async (e) => {
     }
     return false;
 });
-
-function uploadFile(file, fileName) {
-
-
-}
-
-function registerUser(email, password, userName) {
-    let promise = account.create(ID.unique(), email, password, userName);
-    promise.then(function (response) {
-        console.log(response); // Success
-    }, function (error) {
-        console.log(error); // Failure
-    });
-}
-
-function loginUser(email, password) {
-    let promise = account.createEmailSession(email, password);
-    promise.then(function (response) {
-        console.log(response); // Success
-    }, function (error) {
-        console.log(error); // Failure
-    });
-}
-
