@@ -1,10 +1,10 @@
 * {
     font-family: 'Inter';
 }
-.home {
+.home, .qa {
     text-align: center;
 }
-.home button {
+.home button{
     align-items: center;
     width: 349px;
     height: 64px;
@@ -15,7 +15,7 @@
     font-family: 'Inter';
     background-color: #2A87CE;
 }
-input[type="file"] {
+.home input[type="file"] {
     display: none;
 }
 .fileName{
@@ -34,7 +34,7 @@ input[type="file"] {
     margin-top: 30px;
   }
 
-.custom-file-upload {
+.custom-file-upload, .qa button {
     color: rgb(255, 255, 255);
     width: 220px;
     display: inline-block;
@@ -43,4 +43,34 @@ input[type="file"] {
     cursor: pointer;
     background-color: #2A87CE;
     border: none;
+}
+.qa input {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    flex-direction: row;
+    align-items: center;
+    padding: 14px;
+    gap: 5px;
+
+    width: 350px;
+    height: 44px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Main Colors/Gray/0.5 */
+
+    border: 1px solid #909090;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    margin-bottom: 27px;
 }
