@@ -4,6 +4,7 @@ from fileUtils import downloadFile
 from openaiUtils import rq
 from rq.job import Job
 from flask_rq2 import RQ
+from Chatbot.main import getCompletion
 
 app = Flask(__name__, static_url_path='', static_folder='dist')
 rq.init_app(app)
@@ -33,6 +34,14 @@ def get_results(job_key):
         return str(job.result), 200
     else:
         return "Processing document" + str(job), 202
+
+@app.route('/chat',methods = ['POST'])
+@cross_origin()
+def chat():
+   data = request.json
+   print('for', data["messages"])
+   messages = getCompletion(data["messages"])
+   return messages
 
 if __name__ == '__main__':
    app.run(debug = True)
