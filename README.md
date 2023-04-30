@@ -13,3 +13,7 @@
 4. Install the dependencies using `pip install -r requirements.txt`.
 5. Set environment variable for `OPENAI_API_KEY` to your OpenAI API key.
 6. Run `flask --app main run --debug` to start the backend server in development mode.
+
+
+
+LINK TO DEMO OF THE AI TEACHING ASSITANT https://www.youtube.com/watch?v=JfuTI7ZWOwU
