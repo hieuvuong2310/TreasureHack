@@ -1,8 +1,9 @@
 import requests
+import uuid
 
 def downloadFile(fileId):
     url = f"https://cloud.appwrite.io/v1/storage/buckets/644c98b56b824cdc5879/files/{fileId}/download"
-    fileName = "userFile.pdf"
+    fileName = f"userFile{uuid.uuid4()}.pdf"
     headers = {
         'X-Appwrite-Project': "TreasureHacks"
     }
@@ -10,9 +11,6 @@ def downloadFile(fileId):
         r.raise_for_status()
         with open(fileName, 'wb') as f:
             for chunk in r.iter_content(chunk_size=5*1024*1024):
-                # If you have chunk encoded response uncomment if
-                # and set chunk_size parameter to None.
-                #if chunk:
                 f.write(chunk)
     return fileName
 

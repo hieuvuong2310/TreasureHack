@@ -1,7 +1,7 @@
 import { account, ID, storage } from './appwrite';
 import { Permission, Role } from 'appwrite';
 
-const baseURL = "http://localhost:5000";
+const baseURL = "";
 const fileNameField = document.querySelector(".fileName");
 const ids = {
     "whitepaper.pdf": "644cbcc58351e6225d30"

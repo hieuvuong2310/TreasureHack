@@ -7,9 +7,10 @@ module.exports = {
     main: './script.js',
     login: './Login.js',
     register: './Register.js',
+    chat: './Chat.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../backend/dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[id].bundle_[chunkhash].js',
     sourceMapFilename: '[file].map'
@@ -32,6 +33,11 @@ module.exports = {
       template: './Register.html',
       filename: 'register.html',
       chunks: ['register']
+    }),
+    new HtmlWebpackPlugin({
+      template: './Chat.html',
+      filename: 'chat.html',
+      chunks: ['chat']
     }),
     new CopyPlugin({
       patterns: [
