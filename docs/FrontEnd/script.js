@@ -48,8 +48,8 @@ document.querySelector("#summary")?.addEventListener("click", async (e) => {
                 id
             })
         });
-        window.location.href = `${baseURL}/results/${id}`
         const data = await response.json();
+        window.location.href = `${baseURL}/results/${data.JobId}`
         console.log(data);
     } else {
         console.log("No file selected")
