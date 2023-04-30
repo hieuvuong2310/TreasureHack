@@ -9,7 +9,7 @@ module.exports = {
     register: './Register.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../backend/dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[id].bundle_[chunkhash].js',
     sourceMapFilename: '[file].map'

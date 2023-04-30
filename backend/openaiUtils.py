@@ -2,10 +2,14 @@ import os
 import PyPDF2
 import openai
 import time
+from flask_rq2 import RQ
 
 # get API key from environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+rq = RQ()
+
+@rq.job(timeout=60*15)
 def getSummary(filePath):
     pdf_summary_text = []
     pdf_file = open(filePath, 'rb')
@@ -24,7 +28,7 @@ def getSummary(filePath):
             )
             pdf_summary_text.append(response["choices"][0]["message"]["content"])
             time.sleep(20)
-            print(f"Page {page_num}/{len(pdf_reader.pages)} completed")
+            print(f"Page {page_num+1}/{len(pdf_reader.pages)} completed")
         except Exception as e:
             print("Error with openai", e)
 
