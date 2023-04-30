@@ -17,8 +17,6 @@ def getSummary():
    print("Getting summary for file", filePath)
    from openaiUtils import getSummary
    job = getSummary.queue(filePath, result_ttl=300)
-   # summary = getSummary(filePath)
-   # print("Summary:", summary)
    return {
          "JobId": job.get_id(),
          "FileId": data["id"],
@@ -28,9 +26,9 @@ def getSummary():
 def get_results(job_key):
 
     job: Job = rq.get_queue().fetch_job(job_key)
-    print(job.meta.get('progress', 0))
     if job is None:
         return "Could not find job", 404
+    print(job.meta.get('progress', 0))
     if job.is_finished:
         return str(job.result), 200
     else:
