@@ -48,6 +48,7 @@ document.querySelector("#summary")?.addEventListener("click", async (e) => {
                 id
             })
         });
+        window.location.href = `${baseURL}/results/${id}`
         const data = await response.json();
         console.log(data);
     } else {
